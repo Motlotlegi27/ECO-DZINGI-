@@ -1,43 +1,44 @@
-.product-card {
-    position: relative; /* Acts as the container */
-    width: 100%;
-    max-width: 320px;   /* Keeps the card a nice size on mobile */
-    height: 400px;      /* Fixed height so cards are uniform */
-    margin: 20px auto;
-    border-radius: 20px;
-    overflow: hidden;   /* Chops off the extra parts of the big photo */
+/* The Grid that holds the cards */
+.product-grid {
     display: flex;
-    flex-direction: column;
-}
-
-.product-img {
-    position: absolute; /* Pulls the image out of the way of the text */
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;  /* Makes the bag fit the box without stretching */
-    z-index: 1;         /* Puts the bag in the background */
-}
-
-.card-overlay {
-    position: relative;
-    z-index: 2;         /* Forces the price/text to stay in front of the bag */
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5); /* Dims the bag slightly so text is easy to read */
-    display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
     justify-content: center;
-    align-items: center;
-    text-align: center;
-    color: white;
+    gap: 30px;
     padding: 20px;
 }
 
+/* The Card itself */
+.product-card {
+    background: #1a1a1a;
+    width: 280px;
+    padding: 25px;
+    border-radius: 15px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Keeps bag and text centered */
+    border: 1px solid #333;
+}
+
+/* THE FIX: This makes the bag small and neat */
+.product-img-retail {
+    width: auto;
+    max-width: 100%;
+    height: 180px;      /* This is the secret—it limits the height */
+    object-fit: contain; /* Keeps the bag from stretching */
+    margin-bottom: 20px;
+}
+
+.product-card h3 {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+    color: white;
+}
+
 .price {
-    font-size: 2.5rem;
-    font-weight: bold;
+    font-size: 2rem;
     color: #ff4500;
-    margin: 10px 0;
+    font-weight: bold;
+    margin: 15px 0;
 }
 
