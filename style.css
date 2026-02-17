@@ -1,28 +1,29 @@
 .product-card {
     position: relative;
     width: 300px;
-    height: 400px; /* This sets the card size */
+    height: 450px; /* This locks the box size */
     border-radius: 20px;
-    overflow: hidden; /* Keeps the big photo inside the box */
+    overflow: hidden; /* This chops off the extra "giant" part of the photo */
     display: flex;
     flex-direction: column;
+    margin: 10px;
 }
 
 .product-img {
-    position: absolute;
+    position: absolute; /* This pulls the image out of the way */
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Fits the bag perfectly */
-    z-index: 1; /* Puts image in the back */
+    object-fit: cover; /* This makes the bag fit perfectly in the box */
+    z-index: 1; /* Puts the photo in the back */
 }
 
 .card-overlay {
     position: relative;
-    z-index: 2; /* Puts text in front of image */
-    background: rgba(0, 0, 0, 0.5); /* Darkens image so text is easy to read */
+    z-index: 2; /* This forces the text/price to sit ON TOP of the bag */
     height: 100%;
+    background: rgba(0, 0, 0, 0.4); /* Adds a slight dark tint so you can read the P15 */
     display: flex;
     flex-direction: column;
     justify-content: center;
