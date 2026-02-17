@@ -1,124 +1,720 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EcoDzingi Briquettes | Maun, Botswana</title>
-    <meta name="description" content="Affordable charcoal briquettes in Maun. WhatsApp: +267 76329704">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins&family=Montserrat&display=swap" rel="stylesheet">
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Poppins', sans-serif; color: #333; }
-        .container { width: 90%; margin: 0 auto; }
-        
-        /* Header */
-        header { background: #2E7D32; padding: 15px 0; position: fixed; width: 100%; top: 0; }
-        .logo { color: white; font-size: 24px; font-weight: bold; text-align: center; }
-        
-        /* Hero */
-        .hero { background: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4'); background-size: cover; color: white; padding: 120px 0 60px; text-align: center; }
-        .hero h1 { font-size: 32px; margin-bottom: 20px; }
-        .hero p { font-size: 18px; margin-bottom: 30px; }
-        .cta-button { background: #2E7D32; color: white; padding: 15px 30px; border-radius: 30px; text-decoration: none; display: inline-block; font-weight: bold; }
-        
-        /* Sections */
-        section { padding: 60px 0; }
-        h2 { color: #2E7D32; text-align: center; margin-bottom: 30px; font-size: 28px; }
-        
-        /* Products */
-        .product { background: #f9f9f9; padding: 20px; border-radius: 10px; margin-bottom: 20px; }
-        .price { color: #8D6E63; font-size: 24px; font-weight: bold; margin: 10px 0; }
-        
-        /* Contact */
-        .contact { background: #f0f0f0; }
-        .contact-info { background: white; padding: 20px; border-radius: 10px; margin-top: 20px; }
-        
-        /* WhatsApp Button */
-        .whatsapp-btn { position: fixed; bottom: 20px; right: 20px; background: #25d366; color: white; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 30px; text-decoration: none; }
-        
-        /* Mobile Responsive */
-        @media (max-width: 768px) {
-            .hero h1 { font-size: 24px; }
-            section { padding: 40px 0; }
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EcoDzingi Briquettes | Clean Energy for a Green Tomorrow</title>
+  <!-- Fonts & Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    /* -------------------- ROOT VARIABLES & RESET -------------------- */
+    :root {
+      --deep-green: #1B4332;
+      --earth-gold: #D4AF37;
+      --burnt-orange: #C44536;
+      --cream-bg: #FCFAF7;
+      --text-dark: #1A1A1A;
+      --shadow-sm: 0 4px 6px rgba(0,0,0,0.05);
+      --shadow-lg: 0 20px 40px rgba(0,0,0,0.1);
+      --transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--cream-bg);
+      color: var(--text-dark);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    h1, h2, h3, h4 {
+      font-family: 'Playfair Display', serif;
+      font-weight: 700;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+
+    /* -------------------- UTILITY CLASSES -------------------- */
+    .section {
+      padding: 6rem 2rem;
+    }
+
+    .section-title {
+      font-size: 2.8rem;
+      color: var(--deep-green);
+      margin-bottom: 1.5rem;
+      position: relative;
+      display: inline-block;
+    }
+    .section-title::after {
+      content: '';
+      position: absolute;
+      bottom: -10px;
+      left: 0;
+      width: 80px;
+      height: 4px;
+      background: var(--earth-gold);
+      border-radius: 4px;
+    }
+    .text-center {
+      text-align: center;
+    }
+    .text-center .section-title::after {
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .btn {
+      display: inline-block;
+      background: var(--burnt-orange);
+      color: white;
+      font-weight: 600;
+      padding: 0.9rem 2.2rem;
+      border-radius: 50px;
+      transition: var(--transition);
+      border: none;
+      cursor: pointer;
+      font-size: 1rem;
+      box-shadow: 0 10px 20px rgba(196, 69, 54, 0.3);
+    }
+    .btn:hover {
+      background: #a33526;
+      transform: translateY(-3px);
+      box-shadow: 0 15px 25px rgba(196, 69, 54, 0.4);
+    }
+
+    /* -------------------- NAVIGATION (sticky + glass) -------------------- */
+    .navbar {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
+      padding: 1.2rem 2rem;
+      transition: var(--transition);
+      display: flex;
+      justify-content: center;
+    }
+    .navbar.scrolled {
+      padding: 0.8rem 2rem;
+      background: rgba(255, 255, 255, 0.92);
+      backdrop-filter: blur(10px);
+      box-shadow: var(--shadow-sm);
+    }
+    .nav-container {
+      width: 100%;
+      max-width: 1200px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.8rem;
+      font-weight: 900;
+      color: var(--deep-green);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .logo i {
+      color: var(--earth-gold);
+    }
+    .nav-menu {
+      display: flex;
+      gap: 2rem;
+      align-items: center;
+    }
+    .nav-menu a {
+      font-weight: 600;
+      transition: 0.3s;
+    }
+    .nav-menu a:hover {
+      color: var(--burnt-orange);
+    }
+    .nav-cta {
+      background: var(--deep-green);
+      color: white !important;
+      padding: 0.6rem 1.5rem;
+      border-radius: 50px;
+    }
+    .hamburger {
+      display: none;
+      font-size: 2rem;
+      cursor: pointer;
+      color: var(--deep-green);
+    }
+
+    /* -------------------- HERO SECTION (family braai) -------------------- */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+      background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.7)),
+                  url('https://images.pexels.com/photos/699521/pexels-photo-699521.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');
+      background-size: cover;
+      background-position: center 35%;
+      background-attachment: fixed;
+      padding: 0 2rem;
+    }
+    .hero-content {
+      max-width: 900px;
+      animation: fadeUp 1.2s ease-out;
+    }
+    @keyframes fadeUp {
+      0% { opacity: 0; transform: translateY(30px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+    .hero h1 {
+      font-size: clamp(2.5rem, 8vw, 5rem);
+      font-weight: 900;
+      margin-bottom: 1.5rem;
+      text-shadow: 2px 4px 20px rgba(0,0,0,0.5);
+    }
+    .hero p {
+      font-size: 1.4rem;
+      margin-bottom: 2.5rem;
+      font-weight: 300;
+    }
+    .hero .btn {
+      background: var(--earth-gold);
+      color: var(--deep-green);
+      font-size: 1.2rem;
+      padding: 1.2rem 3rem;
+      box-shadow: 0 15px 30px rgba(0,0,0,0.5);
+    }
+    .hero .btn:hover {
+      background: white;
+    }
+
+    /* -------------------- ABOUT SECTION -------------------- */
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: center;
+    }
+    .about-content p {
+      font-size: 1.2rem;
+      margin: 1.8rem 0;
+      color: #2a3a2a;
+    }
+    .about-content strong {
+      color: var(--burnt-orange);
+    }
+    .about-image {
+      animation: float 5s ease-in-out infinite;
+    }
+    .about-image img {
+      width: 100%;
+      border-radius: 30px;
+      box-shadow: var(--shadow-lg);
+    }
+    @keyframes float {
+      0% { transform: translateY(0); }
+      50% { transform: translateY(-15px); }
+      100% { transform: translateY(0); }
+    }
+
+    /* -------------------- FEATURES GRID -------------------- */
+    .features {
+      background: white;
+    }
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2.5rem;
+      margin-top: 3rem;
+    }
+    .feature-card {
+      background: var(--cream-bg);
+      padding: 2.5rem 1.5rem;
+      border-radius: 30px;
+      text-align: center;
+      transition: var(--transition);
+      border-bottom: 4px solid transparent;
+    }
+    .feature-card:hover {
+      transform: translateY(-15px);
+      border-bottom-color: var(--earth-gold);
+      box-shadow: var(--shadow-lg);
+    }
+    .feature-card i {
+      font-size: 3.2rem;
+      color: var(--deep-green);
+      margin-bottom: 1.2rem;
+    }
+    .feature-card h3 {
+      font-size: 1.6rem;
+      color: var(--burnt-orange);
+      margin-bottom: 1rem;
+    }
+
+    /* -------------------- PRODUCT CARDS -------------------- */
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2.5rem;
+      margin-top: 3rem;
+    }
+    .product-card {
+      background: white;
+      border-radius: 40px;
+      padding: 3rem 2rem;
+      text-align: center;
+      box-shadow: var(--shadow-sm);
+      transition: var(--transition);
+      border: 1px solid rgba(0,0,0,0.03);
+      position: relative;
+    }
+    .product-card:hover {
+      transform: scale(1.02);
+      box-shadow: var(--shadow-lg);
+      border-color: var(--earth-gold);
+    }
+    .product-card.popular {
+      border: 2px solid var(--earth-gold);
+    }
+    .popular-badge {
+      position: absolute;
+      top: -15px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--earth-gold);
+      color: white;
+      padding: 5px 20px;
+      border-radius: 30px;
+      font-weight: bold;
+      font-size: 0.8rem;
+    }
+    .product-card h3 {
+      font-size: 2rem;
+      color: var(--deep-green);
+    }
+    .price {
+      font-size: 3rem;
+      font-weight: 900;
+      color: var(--deep-green);
+      margin: 1.5rem 0;
+    }
+    .price span {
+      font-size: 1rem;
+      vertical-align: middle;
+      color: var(--earth-gold);
+      margin-right: 5px;
+    }
+
+    /* -------------------- PROCESS SECTION -------------------- */
+    .process {
+      background: var(--deep-green);
+      color: white;
+    }
+    .process .section-title {
+      color: white;
+    }
+    .process .section-title::after {
+      background: var(--earth-gold);
+    }
+    .process-steps {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 2rem;
+      margin-top: 4rem;
+    }
+    .step {
+      flex: 1;
+      min-width: 150px;
+      text-align: center;
+    }
+    .step-icon {
+      background: var(--burnt-orange);
+      width: 90px;
+      height: 90px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 1.5rem;
+      font-size: 2.5rem;
+      border: 4px solid var(--earth-gold);
+    }
+
+    /* -------------------- CONTACT SECTION -------------------- */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: center;
+    }
+    .contact-info {
+      background: white;
+      padding: 3rem;
+      border-radius: 40px;
+      box-shadow: var(--shadow-lg);
+    }
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin: 2rem 0;
+    }
+    .contact-item i {
+      font-size: 2rem;
+      color: var(--burnt-orange);
+      width: 40px;
+    }
+    .whatsapp-btn {
+      background: #25D366;
+      color: white;
+      padding: 1rem 2rem;
+      border-radius: 50px;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.8rem;
+      font-weight: 600;
+      transition: var(--transition);
+    }
+    .whatsapp-btn:hover {
+      background: #20b859;
+      transform: translateY(-3px);
+    }
+    .contact-form {
+      background: white;
+      padding: 3rem;
+      border-radius: 40px;
+      box-shadow: var(--shadow-lg);
+    }
+    .form-group input,
+    .form-group textarea {
+      width: 100%;
+      padding: 1.2rem;
+      border: 1px solid #ddd;
+      border-radius: 30px;
+      margin-bottom: 1rem;
+      font-family: 'Inter', sans-serif;
+    }
+    .form-group input:focus,
+    .form-group textarea:focus {
+      outline: none;
+      border-color: var(--deep-green);
+    }
+
+    /* -------------------- FOOTER -------------------- */
+    .footer {
+      background: #0f261a;
+      color: #e0e0e0;
+      padding: 3rem 2rem 1.5rem;
+      text-align: center;
+    }
+    .footer .social a {
+      display: inline-block;
+      width: 45px;
+      height: 45px;
+      background: #1f3b2c;
+      border-radius: 50%;
+      line-height: 45px;
+      margin: 0 0.5rem;
+      color: white;
+      transition: var(--transition);
+    }
+    .footer .social a:hover {
+      background: var(--earth-gold);
+      transform: translateY(-5px);
+    }
+    .copyright {
+      margin-top: 2rem;
+      opacity: 0.8;
+      font-size: 0.9rem;
+    }
+
+    /* -------------------- ANIMATIONS & REVEAL -------------------- */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* -------------------- RESPONSIVE -------------------- */
+    @media screen and (max-width: 992px) {
+      .about-grid,
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+    @media screen and (max-width: 768px) {
+      .nav-menu {
+        display: none;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        width: 100%;
+        background: white;
+        flex-direction: column;
+        padding: 2rem;
+        box-shadow: 0 20px 30px rgba(0,0,0,0.1);
+      }
+      .nav-menu.active {
+        display: flex;
+      }
+      .hamburger {
+        display: block;
+      }
+      .process-steps {
+        flex-direction: column;
+        align-items: center;
+      }
+      .step {
+        width: 100%;
+      }
+    }
+  </style>
 </head>
 <body>
-    <!-- WhatsApp Button -->
-    <a href="https://wa.me/26776329704" class="whatsapp-btn" target="_blank">
-        <i class="fab fa-whatsapp"></i>
-    </a>
-    
-    <!-- Header -->
-    <header>
-        <div class="container">
-            <div class="logo">EcoDzingi Briquettes</div>
-        </div>
-    </header>
-    
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="container">
-            <h1>Clean Energy for Maun, Botswana</h1>
-            <p>Affordable charcoal briquettes made from recycled waste. Save 30% on cooking fuel.</p>
-            <a href="https://wa.me/26776329704" class="cta-button">Order on WhatsApp</a>
-        </div>
-    </section>
-    
-    <!-- Products -->
-    <section>
-        <div class="container">
-            <h2>Our Products</h2>
-            <div class="product">
-                <h3>2kg Household Pack</h3>
-                <p>Perfect for families in Maun</p>
-                <div class="price">P15.00</div>
-                <a href="https://wa.me/26776329704?text=I%20want%202kg%20pack" class="cta-button">Order Now</a>
-            </div>
-            <div class="product">
-                <h3>5kg Vendor Pack</h3>
-                <p>For street food vendors</p>
-                <div class="price">P30.00</div>
-                <a href="https://wa.me/26776329704?text=I%20want%205kg%20pack" class="cta-button">Order Now</a>
-            </div>
-            <div class="product">
-                <h3>10kg Business Pack</h3>
-                <p>For lodges & restaurants</p>
-                <div class="price">P50.00</div>
-                <a href="https://wa.me/26776329704?text=I%20want%2010kg%20pack" class="cta-button">Order Now</a>
-            </div>
-        </div>
-    </section>
-    
-    <!-- Contact -->
-    <section class="contact">
-        <div class="container">
-            <h2>Contact Us in Maun</h2>
-            <div class="contact-info">
-                <p><i class="fas fa-phone"></i> WhatsApp: +267 76329704</p>
-                <p><i class="fas fa-map-marker-alt"></i> Location: Maun, Botswana</p>
-                <p><i class="fas fa-fire"></i> Product: Eco-friendly charcoal briquettes</p>
-            </div>
-        </div>
-    </section>
-    
-    <!-- SEO Content (Hidden but helps Google) -->
-    <div style="display:none;">
-        <h1>Charcoal Briquettes Maun Botswana</h1>
-        <p>EcoDzingi provides affordable charcoal briquettes in Maun. We are the best charcoal supplier in Maun, Botswana for households, restaurants, and lodges. Our eco-friendly briquettes are made from recycled waste and help save trees in the Okavango Delta region.</p>
+  <!-- Navigation -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <div class="logo">
+        <i class="fas fa-leaf"></i> EcoDzingi
+      </div>
+      <div class="hamburger" id="hamburger"><i class="fas fa-bars"></i></div>
+      <div class="nav-menu" id="navMenu">
+        <a href="#home">Home</a>
+        <a href="#about">About Us</a>
+        <a href="#product">Product</a>
+        <a href="#contact">Contact</a>
+        <a href="#contact" class="nav-cta">Order Now</a>
+      </div>
     </div>
-    
-    <script>
-        // Simple JavaScript for mobile
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
-    </script>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero" id="home">
+    <div class="hero-content">
+      <h1>The Premium Taste of Braai,<br> Without the Smoke.</h1>
+      <p>Long-lasting, affordable, and eco-friendly briquettes made in Botswana from recycled waste.</p>
+      <a href="#product" class="btn">Shop Now / Inquire</a>
+    </div>
+  </section>
+
+  <!-- About Us -->
+  <section class="section" id="about">
+    <div class="container about-grid">
+      <div class="about-content fade-in">
+        <h2 class="section-title">Our Story</h2>
+        <p><strong>My name is Motlotlegi Moretwa</strong>, and EcoDzingi is my vision. I saw two big problems in my community: the high cost of cooking fuel and the waste being burned in the open. I started EcoDzingi to turn that waste into opportunity. My mission is to provide clean, affordable energy for Botswana while creating jobs, reducing deforestation, and helping our planet. We turn sawdust and maize cobs into the best braai fuel you'll ever use.</p>
+        <a href="#product" class="btn">Explore our briquettes</a>
+      </div>
+      <div class="about-image fade-in">
+        <img src="https://images.pexels.com/photos/3760529/pexels-photo-3760529.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="Motlotlegi Moretwa, founder of EcoDzingi">
+      </div>
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section class="section features" id="features">
+    <div class="container">
+      <h2 class="section-title text-center fade-in">Why EcoDzingi?</h2>
+      <div class="features-grid">
+        <div class="feature-card fade-in">
+          <i class="fas fa-clock"></i>
+          <h3>Long-Lasting</h3>
+          <p>Burns 3x longer than regular charcoal – more braai, less ash.</p>
+        </div>
+        <div class="feature-card fade-in">
+          <i class="fas fa-wind"></i>
+          <h3>Low Smoke</h3>
+          <p>Better for your health and indoor cooking. Almost no smoke or odour.</p>
+        </div>
+        <div class="feature-card fade-in">
+          <i class="fas fa-recycle"></i>
+          <h3>Eco-Friendly</h3>
+          <p>Saves trees and recycles waste maize cobs & sawdust.</p>
+        </div>
+        <div class="feature-card fade-in">
+          <i class="fas fa-coins"></i>
+          <h3>Affordable</h3>
+          <p>Cheaper than imported alternatives, and made locally in Botswana.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Product / Pricing -->
+  <section class="section" id="product">
+    <div class="container">
+      <h2 class="section-title text-center fade-in">Our Briquette Packs</h2>
+      <div class="product-grid">
+        <div class="product-card fade-in">
+          <h3>2kg Bag</h3>
+          <p>Perfect for small families</p>
+          <div class="price"><span>P</span>15</div>
+          <a href="#contact" class="btn">Order Now</a>
+        </div>
+        <div class="product-card popular fade-in">
+          <div class="popular-badge">MOST POPULAR</div>
+          <h3>5kg Bag</h3>
+          <p>Best for weekend braais</p>
+          <div class="price"><span>P</span>30</div>
+          <a href="#contact" class="btn" style="background: var(--burnt-orange);">Order Now</a>
+        </div>
+        <div class="product-card fade-in">
+          <h3>10kg Bag</h3>
+          <p>Ideal for lodges & restaurants</p>
+          <div class="price"><span>P</span>50</div>
+          <a href="#contact" class="btn">Order Now</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How It's Made -->
+  <section class="section process">
+    <div class="container">
+      <h2 class="section-title text-center fade-in">How It's Made</h2>
+      <div class="process-steps">
+        <div class="step fade-in">
+          <div class="step-icon"><i class="fas fa-dumpster"></i></div>
+          <h4>Collect Waste</h4>
+          <p>Sawdust & maize cobs</p>
+        </div>
+        <div class="step fade-in">
+          <div class="step-icon"><i class="fas fa-fire"></i></div>
+          <h4>Carbonize</h4>
+          <p>Low-emission process</p>
+        </div>
+        <div class="step fade-in">
+          <div class="step-icon"><i class="fas fa-blender"></i></div>
+          <h4>Mix</h4>
+          <p>With natural binder</p>
+        </div>
+        <div class="step fade-in">
+          <div class="step-icon"><i class="fas fa-compress-alt"></i></div>
+          <h4>Press</h4>
+          <p>High-density briquettes</p>
+        </div>
+        <div class="step fade-in">
+          <div class="step-icon"><i class="fas fa-sun"></i></div>
+          <h4>Sun Dry</h4>
+          <p>Pure Botswana sunshine</p>
+        </div>
+        <div class="step fade-in">
+          <div class="step-icon"><i class="fas fa-box"></i></div>
+          <h4>Package</h4>
+          <p>Ready for your braai</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="section" id="contact">
+    <div class="container contact-grid">
+      <div class="contact-info fade-in">
+        <h3>Place Your Order or Get in Touch</h3>
+        <p style="margin-bottom: 2rem;">Ready to try the future of braai? Contact us today for a free sample or to place a bulk order.</p>
+        <div class="contact-item">
+          <i class="fas fa-envelope"></i>
+          <a href="mailto:motlotlegimoretwa@gmail.com">motlotlegimoretwa@gmail.com</a>
+        </div>
+        <div class="contact-item">
+          <i class="fab fa-whatsapp"></i>
+          <a href="https://wa.me/26776329704?text=Hello!%20I'm%20interested%20in%20EcoDzingi%20briquettes." target="_blank">+267 76 329 704</a>
+        </div>
+        <a href="https://wa.me/26776329704?text=Hello!%20I'd%20like%20to%20order%20EcoDzingi%20briquettes." class="whatsapp-btn" target="_blank"><i class="fab fa-whatsapp"></i> Chat on WhatsApp</a>
+      </div>
+      <div class="contact-form fade-in">
+        <h3 style="margin-bottom: 1.5rem; color: var(--deep-green);">Quick Message</h3>
+        <form>
+          <div class="form-group">
+            <input type="text" placeholder="Your Name" required>
+          </div>
+          <div class="form-group">
+            <input type="email" placeholder="Email Address" required>
+          </div>
+          <div class="form-group">
+            <textarea placeholder="Your message / order details..."></textarea>
+          </div>
+          <button type="submit" class="btn" style="width: 100%;">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="logo" style="justify-content: center; color: var(--earth-gold); margin-bottom: 1.5rem;">
+      <i class="fas fa-leaf"></i> EcoDzingi Briquettes
+    </div>
+    <div class="social">
+      <a href="#"><i class="fab fa-facebook-f"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-twitter"></i></a>
+    </div>
+    <p class="copyright">© 2025 EcoDzingi Briquettes. Clean Energy for a Green Tomorrow. All rights reserved.</p>
+  </footer>
+
+  <script>
+    // Navbar scroll effect
+    window.addEventListener('scroll', () => {
+      const nav = document.getElementById('navbar');
+      window.scrollY > 100 ? nav.classList.add('scrolled') : nav.classList.remove('scrolled');
+    });
+
+    // Mobile menu toggle
+    const hamburger = document.getElementById('hamburger');
+    const navMenu = document.getElementById('navMenu');
+    hamburger.addEventListener('click', () => {
+      navMenu.classList.toggle('active');
+    });
+
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if(target) {
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          navMenu.classList.remove('active'); // close mobile menu
+        }
+      });
+    });
+
+    // Intersection Observer for fade-in animations
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if(entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.2, rootMargin: '0px 0px -50px 0px' });
+
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+  </script>
 </body>
 </html>
